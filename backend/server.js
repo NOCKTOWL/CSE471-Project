@@ -72,7 +72,7 @@ mongoose.connect(process.env.MONGO_URI)
     const io = require("socket.io")(server, {
       pingTimeout: 60000,
       cors: {
-        origin: "http://localhost:3000",
+        origin: process.env.REACT_APP_BACKENDURL,
         // credentials: true,
       },
     });
